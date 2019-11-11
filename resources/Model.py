@@ -25,7 +25,7 @@ class JobMonitor(db.Model):
 
 class JobMonitorSchema(ma.Schema):
     id = fields.Integer(dump_only=True)
-    job_id = fields.UUID(required=True)
-    app_name = fields.String(required=True, validate=validate.Length(1))
-    state = fields.String(required=True, validate=validate.Length(1))
+    job_id = fields.UUID(dump_only=True)
+    app_name = fields.String(validate=validate.Length(1))
+    state = fields.String(validate=validate.Length(1))
     date_created = fields.DateTime()

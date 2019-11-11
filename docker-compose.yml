@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  src
+    build: .
+    ports:
+     - localhost:5432
+    volumes:
+     - ./usr/src/app
