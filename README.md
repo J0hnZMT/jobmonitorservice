@@ -32,9 +32,24 @@ docker container run job_monitor
 ```
 ## create database
 
-type in the command line
+copy and paste in the command line from sql-script.txt
 ```
-docker container run job_monitor
+CREATE DATABASE test_db
+```
+## Update the database-url 
+
+update the database-url env in .env
+```
+DATABASE_URL= postgres://(username in db):(password)@host.docker.internal:5432/test_db
+```
+## Using the API
+using GET
+```
+http://172.0.0.1:8000/modulelog/
+```
+using GET with job id
+```
+http://172.0.0.1:8000/modulelog/<job_id>
 ```
 
 ## Author
