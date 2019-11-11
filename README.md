@@ -30,6 +30,12 @@ type in the command line
 ```
 docker container run job_monitor
 ```
+## create database
+
+type in the command line
+```
+docker container run job_monitor
+```
 
 ## Author
 **Johnzel Tuddao** - *Initial work* - [J0hnZMT](https://github.com/J0hnZMT)
