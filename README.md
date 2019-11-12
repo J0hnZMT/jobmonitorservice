@@ -42,12 +42,19 @@ update the database-url env in .env
 ```
 DATABASE_URL= postgres://(username in db):(password)@host.docker.internal:5432/test_db
 ```
+## Migration 
+Migrate the table on the database
+```
+python migrate.py db init
+python migrate.py db migrate
+python migrate.py db upgrade
+```
 ## Using the API
-using GET
+using GET (list all the data in the table)
 ```
 http://172.0.0.1:8000/modulelog/
 ```
-using GET with job id
+using GET with job id (list a specific data from table)
 ```
 http://172.0.0.1:8000/modulelog/<job_id>
 ```
