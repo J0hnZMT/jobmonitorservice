@@ -16,9 +16,7 @@ def create_app(envi_name):
     return app
 
 
-if __name__ == "__main__":
-    env_name = os.getenv('FLASK_ENV')
-    app = create_app(env_name)
-    app.run()
+env_name = os.getenv('FLASK_ENV')
+app = create_app(env_name)
 
 
